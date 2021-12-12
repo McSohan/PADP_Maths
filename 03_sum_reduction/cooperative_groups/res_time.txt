@@ -1,0 +1,24 @@
+==1165== NVPROF is profiling process 1165, command: ./a.out
+==1165== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==1165== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==1165== Profiling application: ./a.out
+==1165== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  7.6480us         1  7.6480us  7.6480us  7.6480us  sum_reduction(int*, int*, int)
+      API calls:   99.47%  218.72ms         2  109.36ms  18.950us  218.70ms  cudaMallocManaged
+                    0.29%  641.93us         1  641.93us  641.93us  641.93us  cuDeviceTotalMem
+                    0.10%  221.22us       101  2.1900us     153ns  101.76us  cuDeviceGetAttribute
+                    0.09%  208.42us         1  208.42us  208.42us  208.42us  cudaLaunchKernel
+                    0.02%  33.957us         1  33.957us  33.957us  33.957us  cuDeviceGetName
+                    0.01%  21.651us         3  7.2170us     219ns  20.206us  cuDeviceGetCount
+                    0.01%  18.771us         1  18.771us  18.771us  18.771us  cudaDeviceSynchronize
+                    0.00%  6.7440us         1  6.7440us  6.7440us  6.7440us  cuDeviceGetPCIBusId
+                    0.00%  1.7260us         2     863ns     493ns  1.2330us  cuDeviceGet
+                    0.00%     330ns         1     330ns     330ns     330ns  cuDeviceGetUuid
+
+==1165== Unified Memory profiling result:
+Device "Tesla K80 (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       1  32.000KB  32.000KB  32.000KB  32.00000KB  7.328000us  Host To Device
+       5  25.600KB  4.0000KB  60.000KB  128.0000KB  30.94400us  Device To Host
+Total CPU Page faults: 2

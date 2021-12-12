@@ -1,0 +1,19 @@
+==889== NVPROF is profiling process 889, command: ./a.out
+==889== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==889== Profiling application: ./a.out
+==889== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   93.03%  24.700ms         1  24.700ms  24.700ms  24.700ms  matrixMul(int const *, int const *, int*, int)
+                    4.68%  1.2414ms         2  620.71us  588.31us  653.11us  [CUDA memcpy HtoD]
+                    2.30%  609.82us         1  609.82us  609.82us  609.82us  [CUDA memcpy DtoH]
+      API calls:   87.55%  205.07ms         3  68.356ms  116.95us  204.83ms  cudaMalloc
+                   11.51%  26.959ms         3  8.9862ms  663.91us  25.563ms  cudaMemcpy
+                    0.60%  1.3939ms         3  464.62us  231.08us  582.47us  cudaFree
+                    0.22%  526.65us         1  526.65us  526.65us  526.65us  cuDeviceTotalMem
+                    0.08%  192.21us       101  1.9030us     154ns  80.211us  cuDeviceGetAttribute
+                    0.02%  42.030us         1  42.030us  42.030us  42.030us  cudaLaunchKernel
+                    0.01%  35.107us         1  35.107us  35.107us  35.107us  cuDeviceGetName
+                    0.00%  7.6250us         1  7.6250us  7.6250us  7.6250us  cuDeviceGetPCIBusId
+                    0.00%  2.0790us         3     693ns     191ns  1.1340us  cuDeviceGetCount
+                    0.00%  1.4320us         2     716ns     248ns  1.1840us  cuDeviceGet
+                    0.00%     330ns         1     330ns     330ns     330ns  cuDeviceGetUuid

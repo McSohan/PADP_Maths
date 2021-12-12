@@ -1,0 +1,21 @@
+==1677== NVPROF is profiling process 1677, command: ./a.out
+==1677== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==1677== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==1677== Profiling application: ./a.out
+==1677== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   70.10%  1.7143ms         1  1.7143ms  1.7143ms  1.7143ms  [CUDA memcpy DtoH]
+                   25.94%  634.43us         2  317.21us  2.0480us  632.38us  [CUDA memcpy HtoD]
+                    3.95%  96.671us         1  96.671us  96.671us  96.671us  convolution_1d(int*, int*, int)
+      API calls:   97.59%  196.16ms         2  98.079ms  124.83us  196.03ms  cudaMalloc
+                    1.78%  3.5707ms         2  1.7853ms  660.52us  2.9101ms  cudaMemcpy
+                    0.31%  617.64us         1  617.64us  617.64us  617.64us  cuDeviceTotalMem
+                    0.14%  275.76us       101  2.7300us     223ns  113.79us  cuDeviceGetAttribute
+                    0.07%  138.58us         1  138.58us  138.58us  138.58us  cudaMemcpyToSymbol
+                    0.07%  136.78us         1  136.78us  136.78us  136.78us  cudaFree
+                    0.03%  53.534us         1  53.534us  53.534us  53.534us  cudaLaunchKernel
+                    0.02%  30.719us         1  30.719us  30.719us  30.719us  cuDeviceGetName
+                    0.00%  6.9300us         1  6.9300us  6.9300us  6.9300us  cuDeviceGetPCIBusId
+                    0.00%  2.6900us         3     896ns     316ns  1.3390us  cuDeviceGetCount
+                    0.00%  2.2880us         2  1.1440us     443ns  1.8450us  cuDeviceGet
+                    0.00%     424ns         1     424ns     424ns     424ns  cuDeviceGetUuid

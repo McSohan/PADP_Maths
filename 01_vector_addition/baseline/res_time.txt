@@ -1,0 +1,19 @@
+==461== NVPROF is profiling process 461, command: ./a.out
+==461== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==461== Profiling application: ./a.out
+==461== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   62.78%  76.320us         2  38.160us  37.760us  38.560us  [CUDA memcpy HtoD]
+                   31.09%  37.792us         1  37.792us  37.792us  37.792us  [CUDA memcpy DtoH]
+                    6.13%  7.4560us         1  7.4560us  7.4560us  7.4560us  vectorAdd(int const *, int const *, int*, int)
+      API calls:   99.19%  201.72ms         3  67.239ms  2.1220us  201.71ms  cudaMalloc
+                    0.33%  680.01us         1  680.01us  680.01us  680.01us  cuDeviceTotalMem
+                    0.22%  443.11us         3  147.70us  87.312us  248.61us  cudaMemcpy
+                    0.15%  301.60us       101  2.9860us     168ns  173.34us  cuDeviceGetAttribute
+                    0.07%  143.57us         3  47.857us  2.7490us  126.65us  cudaFree
+                    0.01%  30.109us         1  30.109us  30.109us  30.109us  cuDeviceGetName
+                    0.01%  29.406us         1  29.406us  29.406us  29.406us  cudaLaunchKernel
+                    0.00%  6.8810us         1  6.8810us  6.8810us  6.8810us  cuDeviceGetPCIBusId
+                    0.00%  1.8020us         3     600ns     198ns  1.0170us  cuDeviceGetCount
+                    0.00%  1.4330us         2     716ns     316ns  1.1170us  cuDeviceGet
+                    0.00%     313ns         1     313ns     313ns     313ns  cuDeviceGetUuid

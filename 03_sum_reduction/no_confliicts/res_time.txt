@@ -1,0 +1,19 @@
+==1308== NVPROF is profiling process 1308, command: ./a.out
+==1308== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==1308== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==1308== Profiling application: ./a.out
+==1308== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   39.53%  38.880us         1  38.880us  38.880us  38.880us  [CUDA memcpy HtoD]
+                   36.17%  35.584us         1  35.584us  35.584us  35.584us  [CUDA memcpy DtoH]
+                   24.30%  23.903us         2  11.951us  5.3760us  18.527us  sum_reduction(int*, int*)
+      API calls:   99.41%  197.38ms         2  98.692ms  3.8710us  197.38ms  cudaMalloc
+                    0.23%  448.84us         1  448.84us  448.84us  448.84us  cuDeviceTotalMem
+                    0.16%  307.86us       101  3.0480us     144ns  178.83us  cuDeviceGetAttribute
+                    0.14%  284.04us         2  142.02us  45.626us  238.42us  cudaMemcpy
+                    0.04%  85.555us         2  42.777us  14.835us  70.720us  cudaLaunchKernel
+                    0.01%  26.402us         1  26.402us  26.402us  26.402us  cuDeviceGetName
+                    0.00%  7.9410us         1  7.9410us  7.9410us  7.9410us  cuDeviceGetPCIBusId
+                    0.00%  2.1020us         3     700ns     216ns  1.0910us  cuDeviceGetCount
+                    0.00%  1.6690us         2     834ns     482ns  1.1870us  cuDeviceGet
+                    0.00%     364ns         1     364ns     364ns     364ns  cuDeviceGetUuid

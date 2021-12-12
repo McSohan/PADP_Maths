@@ -1,0 +1,19 @@
+==1261== NVPROF is profiling process 1261, command: ./a.out
+==1261== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==1261== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==1261== Profiling application: ./a.out
+==1261== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   35.27%  38.528us         1  38.528us  38.528us  38.528us  [CUDA memcpy HtoD]
+                   32.40%  35.391us         2  17.695us  7.2320us  28.159us  sumReduction(int*, int*)
+                   32.34%  35.328us         1  35.328us  35.328us  35.328us  [CUDA memcpy DtoH]
+      API calls:   99.49%  214.50ms         2  107.25ms  4.1700us  214.49ms  cudaMalloc
+                    0.24%  515.99us         1  515.99us  515.99us  515.99us  cuDeviceTotalMem
+                    0.14%  293.32us       101  2.9040us     157ns  115.89us  cuDeviceGetAttribute
+                    0.08%  175.12us         2  87.559us  59.574us  115.55us  cudaMemcpy
+                    0.03%  74.970us         2  37.485us  13.463us  61.507us  cudaLaunchKernel
+                    0.02%  38.525us         1  38.525us  38.525us  38.525us  cuDeviceGetName
+                    0.00%  5.8400us         1  5.8400us  5.8400us  5.8400us  cuDeviceGetPCIBusId
+                    0.00%  1.9080us         3     636ns     168ns  1.0230us  cuDeviceGetCount
+                    0.00%  1.5800us         2     790ns     240ns  1.3400us  cuDeviceGet
+                    0.00%     514ns         1     514ns     514ns     514ns  cuDeviceGetUuid

@@ -1,0 +1,27 @@
+==619== NVPROF is profiling process 619, command: ./a.out
+==619== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==619== Profiling application: ./a.out
+==619== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  7.6800us         1  7.6800us  7.6800us  7.6800us  vectorAdd(int*, int*, int*, int)
+      API calls:   98.56%  219.57ms         3  73.189ms  3.2170us  219.55ms  cudaMallocManaged
+                    0.79%  1.7644ms         4  441.11us  1.9170us  1.7334ms  cudaMemAdvise
+                    0.27%  599.61us         1  599.61us  599.61us  599.61us  cuDeviceTotalMem
+                    0.14%  320.57us         1  320.57us  320.57us  320.57us  cudaLaunchKernel
+                    0.10%  215.33us       101  2.1320us     160ns  80.552us  cuDeviceGetAttribute
+                    0.10%  214.42us         3  71.472us  10.569us  178.33us  cudaFree
+                    0.02%  38.625us         1  38.625us  38.625us  38.625us  cudaDeviceSynchronize
+                    0.01%  29.548us         1  29.548us  29.548us  29.548us  cuDeviceGetName
+                    0.00%  8.3120us         6  1.3850us     560ns  2.9670us  cudaMemPrefetchAsync
+                    0.00%  5.9300us         1  5.9300us  5.9300us  5.9300us  cuDeviceGetPCIBusId
+                    0.00%  1.7800us         3     593ns     208ns  1.0040us  cuDeviceGetCount
+                    0.00%  1.5390us         2     769ns     330ns  1.2090us  cuDeviceGet
+                    0.00%  1.2850us         1  1.2850us  1.2850us  1.2850us  cudaGetDevice
+                    0.00%     347ns         1     347ns     347ns     347ns  cuDeviceGetUuid
+
+==619== Unified Memory profiling result:
+Device "Tesla K80 (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       3  170.67KB  128.00KB  256.00KB  512.0000KB  84.92700us  Host To Device
+      32  44.000KB  4.0000KB  252.00KB  1.375000MB  272.5100us  Device To Host
+Total CPU Page faults: 16

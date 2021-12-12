@@ -1,0 +1,19 @@
+==993== NVPROF is profiling process 993, command: ./a.out
+==993== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==993== Warning: Profiling results might be incorrect with current version of nvcc compiler used to compile cuda app. Compile with nvcc compiler 9.0 or later version to get correct profiling results. Ignore this warning if code is already compiled with the recommended nvcc version 
+==993== Profiling application: ./a.out
+==993== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   92.95%  109.50ms         1  109.50ms  109.50ms  109.50ms  matrixMul(int const *, int const *, int*)
+                    6.11%  7.1936ms         2  3.5968ms  2.4211ms  4.7726ms  [CUDA memcpy HtoD]
+                    0.95%  1.1155ms         1  1.1155ms  1.1155ms  1.1155ms  [CUDA memcpy DtoH]
+      API calls:   62.02%  194.45ms         3  64.816ms  149.02us  194.14ms  cudaMalloc
+                   37.71%  118.23ms         3  39.409ms  2.4758ms  110.83ms  cudaMemcpy
+                    0.17%  538.38us         1  538.38us  538.38us  538.38us  cuDeviceTotalMem
+                    0.06%  200.94us       101  1.9890us     163ns  80.348us  cuDeviceGetAttribute
+                    0.02%  62.079us         1  62.079us  62.079us  62.079us  cudaLaunchKernel
+                    0.01%  27.123us         1  27.123us  27.123us  27.123us  cuDeviceGetName
+                    0.00%  7.0840us         1  7.0840us  7.0840us  7.0840us  cuDeviceGetPCIBusId
+                    0.00%  2.3990us         3     799ns     370ns  1.3630us  cuDeviceGetCount
+                    0.00%  1.3800us         2     690ns     275ns  1.1050us  cuDeviceGet
+                    0.00%     317ns         1     317ns     317ns     317ns  cuDeviceGetUuid

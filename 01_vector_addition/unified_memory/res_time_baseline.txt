@@ -1,0 +1,24 @@
+==569== NVPROF is profiling process 569, command: ./a.out
+==569== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==569== Profiling application: ./a.out
+==569== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:  100.00%  7.7440us         1  7.7440us  7.7440us  7.7440us  vectorAdd(int*, int*, int*, int)
+      API calls:   99.43%  220.46ms         3  73.488ms  10.066us  220.43ms  cudaMallocManaged
+                    0.24%  533.11us         1  533.11us  533.11us  533.11us  cuDeviceTotalMem
+                    0.14%  310.05us         1  310.05us  310.05us  310.05us  cudaLaunchKernel
+                    0.09%  204.60us       101  2.0250us     163ns  83.052us  cuDeviceGetAttribute
+                    0.07%  153.45us         3  51.148us  6.2730us  125.98us  cudaFree
+                    0.01%  26.790us         1  26.790us  26.790us  26.790us  cuDeviceGetName
+                    0.01%  17.364us         1  17.364us  17.364us  17.364us  cudaDeviceSynchronize
+                    0.00%  5.9820us         1  5.9820us  5.9820us  5.9820us  cuDeviceGetPCIBusId
+                    0.00%  2.3330us         3     777ns     231ns  1.5010us  cuDeviceGetCount
+                    0.00%  1.6970us         2     848ns     286ns  1.4110us  cuDeviceGet
+                    0.00%     323ns         1     323ns     323ns     323ns  cuDeviceGetUuid
+
+==569== Unified Memory profiling result:
+Device "Tesla K80 (0)"
+   Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
+       2  256.00KB  128.00KB  384.00KB  512.0000KB  76.89500us  Host To Device
+      31  53.677KB  4.0000KB  316.00KB  1.625000MB  289.9180us  Device To Host
+Total CPU Page faults: 15
