@@ -1,24 +1,24 @@
-==569== NVPROF is profiling process 569, command: ./a.out
-==569== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
-==569== Profiling application: ./a.out
-==569== Profiling result:
+==361== NVPROF is profiling process 361, command: ./bl
+==361== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==361== Profiling application: ./bl
+==361== Profiling result:
             Type  Time(%)      Time     Calls       Avg       Min       Max  Name
- GPU activities:  100.00%  7.7440us         1  7.7440us  7.7440us  7.7440us  vectorAdd(int*, int*, int*, int)
-      API calls:   99.43%  220.46ms         3  73.488ms  10.066us  220.43ms  cudaMallocManaged
-                    0.24%  533.11us         1  533.11us  533.11us  533.11us  cuDeviceTotalMem
-                    0.14%  310.05us         1  310.05us  310.05us  310.05us  cudaLaunchKernel
-                    0.09%  204.60us       101  2.0250us     163ns  83.052us  cuDeviceGetAttribute
-                    0.07%  153.45us         3  51.148us  6.2730us  125.98us  cudaFree
-                    0.01%  26.790us         1  26.790us  26.790us  26.790us  cuDeviceGetName
-                    0.01%  17.364us         1  17.364us  17.364us  17.364us  cudaDeviceSynchronize
-                    0.00%  5.9820us         1  5.9820us  5.9820us  5.9820us  cuDeviceGetPCIBusId
-                    0.00%  2.3330us         3     777ns     231ns  1.5010us  cuDeviceGetCount
-                    0.00%  1.6970us         2     848ns     286ns  1.4110us  cuDeviceGet
-                    0.00%     323ns         1     323ns     323ns     323ns  cuDeviceGetUuid
+ GPU activities:  100.00%  6.6005ms         1  6.6005ms  6.6005ms  6.6005ms  vectorAdd(int*, int*, int*, int)
+      API calls:   60.50%  330.01ms         3  110.00ms  40.867ms  248.14ms  cudaMallocManaged
+                   23.86%  130.16ms         3  43.388ms  42.647ms  44.382ms  cudaFree
+                   14.28%  77.868ms         1  77.868ms  77.868ms  77.868ms  cudaLaunchKernel
+                    1.21%  6.6138ms         1  6.6138ms  6.6138ms  6.6138ms  cudaDeviceSynchronize
+                    0.11%  591.15us         1  591.15us  591.15us  591.15us  cuDeviceTotalMem
+                    0.03%  182.66us       101  1.8080us     141ns  75.993us  cuDeviceGetAttribute
+                    0.01%  39.680us         1  39.680us  39.680us  39.680us  cuDeviceGetName
+                    0.00%  5.7090us         1  5.7090us  5.7090us  5.7090us  cuDeviceGetPCIBusId
+                    0.00%  1.7710us         3     590ns     226ns     875ns  cuDeviceGetCount
+                    0.00%  1.1630us         2     581ns     299ns     864ns  cuDeviceGet
+                    0.00%     283ns         1     283ns     283ns     283ns  cuDeviceGetUuid
 
-==569== Unified Memory profiling result:
+==361== Unified Memory profiling result:
 Device "Tesla K80 (0)"
    Count  Avg Size  Min Size  Max Size  Total Size  Total Time  Name
-       2  256.00KB  128.00KB  384.00KB  512.0000KB  76.89500us  Host To Device
-      31  53.677KB  4.0000KB  316.00KB  1.625000MB  289.9180us  Device To Host
-Total CPU Page faults: 15
+     258  1.9845MB  128.00KB  2.0000MB  512.0000MB  76.43761ms  Host To Device
+    7700  170.22KB  4.0000KB  0.9961MB  1.250000GB  200.6103ms  Device To Host
+Total CPU Page faults: 3850
