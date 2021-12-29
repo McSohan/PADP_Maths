@@ -1,1 +1,20 @@
-======== Error: application not found.
+==188== NVPROF is profiling process 188, command: ./a.out
+==188== Warning: Auto boost enabled on device 0. Profiling results may be inconsistent.
+==188== Profiling application: ./a.out
+==188== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   68.46%  1.5719ms         1  1.5719ms  1.5719ms  1.5719ms  [CUDA memcpy DtoH]
+                   24.69%  566.94us         2  283.47us  2.4960us  564.45us  [CUDA memcpy HtoD]
+                    6.85%  157.28us         1  157.28us  157.28us  157.28us  convolution_1d(int*, int*, int)
+      API calls:   97.89%  246.74ms         2  123.37ms  137.04us  246.60ms  cudaMalloc
+                    1.33%  3.3551ms         2  1.6776ms  566.99us  2.7882ms  cudaMemcpy
+                    0.35%  881.26us         1  881.26us  881.26us  881.26us  cuDeviceGetPCIBusId
+                    0.19%  473.42us         1  473.42us  473.42us  473.42us  cuDeviceTotalMem
+                    0.09%  222.50us       101  2.2020us     143ns  108.07us  cuDeviceGetAttribute
+                    0.07%  167.80us         1  167.80us  167.80us  167.80us  cudaFree
+                    0.06%  155.47us         1  155.47us  155.47us  155.47us  cudaMemcpyToSymbol
+                    0.01%  31.311us         1  31.311us  31.311us  31.311us  cuDeviceGetName
+                    0.01%  24.287us         1  24.287us  24.287us  24.287us  cudaLaunchKernel
+                    0.00%  2.4940us         3     831ns     363ns  1.1930us  cuDeviceGetCount
+                    0.00%  1.7230us         2     861ns     531ns  1.1920us  cuDeviceGet
+                    0.00%     314ns         1     314ns     314ns     314ns  cuDeviceGetUuid
