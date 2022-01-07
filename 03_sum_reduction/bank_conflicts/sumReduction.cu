@@ -1,6 +1,5 @@
 // This program performs sum reduction with an optimization
 // removing warp divergence
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
