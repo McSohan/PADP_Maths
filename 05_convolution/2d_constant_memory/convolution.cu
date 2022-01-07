@@ -1,5 +1,4 @@
 // This program implements 2D convolution using Constant memory in CUDA
-// By: Nick from CoffeeBeforeArch
 
 #include <cassert>
 #include <cstdlib>
