@@ -1,5 +1,4 @@
 // This program computes a sum reduction algortithm with warp divergence
-// By: Nick from CoffeeBeforeArch
 
 #include <cstdlib>
 #include <iostream>
