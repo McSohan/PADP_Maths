@@ -1,5 +1,4 @@
 // This program computer the sum of two N-element vectors using unified memory
-// By: Nick from CoffeeBeforeArch
 
 #include <stdio.h>
 #include <cassert>
