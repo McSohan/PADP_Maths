@@ -1,5 +1,4 @@
 // This program computes matrix multiplication using shared memory tiling
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
