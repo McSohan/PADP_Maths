@@ -1,7 +1,6 @@
 // This program implements a 1D convolution using CUDA,
 // and stores the mask in constant memory. It loads the
 // primary array into shared memory, but not halo elements.
-// By: Nick from CoffeeBeforeArch
 
 #include <cassert>
 #include <cstdlib>
