@@ -1,6 +1,5 @@
 // This program shows off a shared memory implementation of a histogram
 // kernel in CUDA
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
