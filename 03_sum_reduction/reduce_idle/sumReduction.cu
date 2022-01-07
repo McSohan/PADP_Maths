@@ -1,6 +1,5 @@
 // This program performs sum reduction with an optimization
 // that removes shared memory bank conflicts
-// By: Nick from CoffeeBeforeArch
 
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
