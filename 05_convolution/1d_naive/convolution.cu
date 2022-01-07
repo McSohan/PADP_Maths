@@ -1,5 +1,4 @@
 // This program implements a 1D convolution using CUDA
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
