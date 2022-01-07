@@ -1,5 +1,4 @@
 // This program computes the sum of two vectors of length N
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
