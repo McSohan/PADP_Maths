@@ -1,5 +1,4 @@
 // This program computes a simple version of matrix multiplication
-// By: Nick from CoffeeBeforeArch
 
 #include <algorithm>
 #include <cassert>
