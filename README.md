@@ -4,12 +4,8 @@
 
 ### Operating system 
 
-NAME="Ubuntu"
-VERSION="18.04.5 LTS (Bionic Beaver)"
-ID=ubuntu
-ID_LIKE=debian
-PRETTY_NAME="Ubuntu 18.04.5 LTS"
-VERSION_ID="18.04"
+NAME="Ubuntu"<br/>
+VERSION="18.04.5 LTS (Bionic Beaver)"<br/>
 
 ### GPU
 +-----------------------------------------------------------------------------+<br/>
