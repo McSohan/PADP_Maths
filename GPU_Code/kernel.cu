@@ -1,9 +1,5 @@
 ﻿/*****************************************************************************
-KAAN FURKAN ALTINOK 2030021 - GÖKBERK AFŞİN PEKER 2094357
-3DES ON GPU IMPLEMENTATION
-Course : Applied Parallel Programming on GPU
-Lecturer: Dr.Alptekin Temizel
-
+M C Sohan
 This code read inputs from ascii character (input.txt), processes 3DES on GPU and outputs the encyrpted hexadecimal formatted text to encyrpted_hex.txt 
 *******************************************************************************/
 
