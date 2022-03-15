@@ -1,8 +1,5 @@
 ﻿/*****************************************************************************
-KAAN FURKAN ALTINOK 2030021 - GÖKBERK AFŞİN PEKER 2094357
-3DES ON CPU IMPLEMENTATION
-Course : Applied Parallel Programming on GPU
-Lecturer: Dr.Alptekin Temizel
+M C Sohan
 
 This program takes a foramtted txt file and encyrpts in 3DES mode with OPENMP. 
 *******************************************************************************/
